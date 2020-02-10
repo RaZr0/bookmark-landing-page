@@ -1,0 +1,86 @@
+@import '../breakpoints';
+@import '../colors';
+$questionBorder: 1px solid rgba($color: #979797, $alpha: .3);
+.questions {
+    text-align: center;
+    .accordion {
+        &__item {
+            cursor: pointer;
+        }
+        &__item--active {
+            .item__answer {
+                display: block !important;
+            }
+        }
+        &__item--active {
+            .item__question {
+                border-bottom: inherit !important;
+            }
+            .item {
+                &__question {
+                    &::after {
+                        content: '';
+                        background-image: url(/images/icon-arrow.svg);
+                        height: 12px;
+                        width: 18px;
+                        background-repeat: no-repeat;
+                        transform: rotate(180deg);
+                        filter: invert(49%) sepia(33%) saturate(1104%) hue-rotate(313deg) brightness(96%) contrast(105%);
+                    }
+                }
+            }
+        }
+        &__item:last-of-type.item .item__question {
+            border-bottom: $questionBorder;
+        }
+        .item {
+            &__question {
+                font-size: 15px;
+                line-height: 32px;
+                color: $Very-Dark-Blue;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 18px 0;
+                &:nth-child(n) {
+                    border-top: $questionBorder;
+                }
+                &::after {
+                    content: '';
+                    background-image: url(/images/icon-arrow.svg);
+                    height: 12px;
+                    width: 18px;
+                    background-repeat: no-repeat;
+                }
+            }
+            &__answer {
+                display: none;
+                margin-top: 0;
+                text-align: left;
+            }
+        }
+        &__item:last-of-type.item .item__question {
+            border-bottom: $questionBorder;
+        }
+    }
+    @media #{$small},
+    #{$medium} {
+        margin-top: 140px;
+        &__accordion {
+            margin-top: 64px;
+            text-align: left;
+        }
+        &__link {
+            margin-top: 48px;
+        }
+    }
+    @media #{$large} {
+        margin-top: 148px;
+        .accordion {
+            margin-top: 56px;
+        }
+        &__link {
+            margin-top: 54px;
+        }
+    }
+}

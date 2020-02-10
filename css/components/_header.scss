@@ -1,0 +1,119 @@
+@import '../breakpoints';
+@import '../colors';
+.header {
+    padding-top: 40px;
+    .container {
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &__socials {
+        display: none;
+    }
+    @media #{$small},
+    #{$medium} {
+        z-index: 999;
+        &.mobile-nav-open {
+            background: $Very-Dark-Blue;
+            background: #252b46;
+            position: absolute;
+            opacity: 0.95;
+            width: 100%;
+            height: 100vh;
+        }
+        .container {
+            .content {
+                flex-wrap: wrap;
+            }
+        }
+        &__hamburger {
+            border: 0;
+            outline: 0;
+            padding: 0;
+            background: transparent;
+        }
+        &__nav {
+            width: 100%;
+            display: none;
+            text-align: center;
+            &.open {
+                display: block;
+            }
+        }
+        .nav {
+            &__items {
+                display: flex;
+                flex-direction: column;
+                margin-top: 39px;
+                justify-content: center;
+            }
+            &__item {
+                border-top: 1px solid $Grayish-Blue;
+                padding: 24px 0;
+                font-size: 20px;
+                letter-spacing: 2.31px;
+            }
+            &__link {
+                color: $white;
+                display: block;
+            }
+            &__link--active {
+                border: 2px solid $white;
+                padding: 13px 0;
+                max-width: 383px;
+                border-radius: 5px;
+                font-weight: 500;
+                margin: 0 auto;
+            }
+        }
+        &.mobile-nav-open .socials {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            bottom: 48px;
+            right: 0;
+            left: 0;
+            align-items: center;
+            &__item {
+                margin: 0 20px;
+            }
+        }
+    }
+    @media #{$large} {
+        .nav {
+            &__items {
+                display: flex;
+                align-items: center;
+            }
+            &__item {
+                margin-left: 45px;
+            }
+            &__link {
+                color: $Very-Dark-Blue;
+                font-size: 0.8125rem;
+                letter-spacing: 0.0938rem;
+                display: block;
+                &:hover {
+                    color: $Soft-Red;
+                }
+            }
+            &__link--active {
+                padding: 11px 32px;
+                background: $Soft-Red;
+                border-radius: 5px;
+                color: $white;
+                font-weight: 500;
+                border-width: 1.5px;
+                border-style: solid;
+                border-color: transparent;
+                ;
+                &:hover {
+                    border-color: $Soft-Red;
+                    background: $white;
+                }
+            }
+        }
+    }
+}

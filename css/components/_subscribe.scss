@@ -1,0 +1,144 @@
+@import '../breakpoints';
+@import '../colors';
+.subscribe {
+    background-color: $Soft-Blue;
+    text-align: center;
+    color: $white;
+    &__title.title {
+        color: $white;
+    }
+    &__members {
+        color: $white;
+        opacity: inherit;
+        line-height: 40px;
+        font-weight: 500;
+        letter-spacing: 4.62px;
+        margin: 0;
+    }
+    .subscribe-form {
+        &__submit {
+            display: block;
+            background-color: $Soft-Red;
+            color: $white;
+            font-weight: 500;
+            letter-spacing: .25px;
+            font-family: inherit;
+            align-self: baseline;
+            &:hover {
+                color: $Soft-Red;
+                border: 2px solid $Soft-Red;
+                background: $white;
+            }
+        }
+    }
+    &__form {
+        margin-top: 32px;
+        .form-group {
+            position: relative;
+        }
+        input {
+            width: 100%;
+            font-family: inherit;
+            font-size: 14px;
+            letter-spacing: .25px;
+            padding: 10px 16px 10px 20px;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            position: relative;
+            z-index: 1;
+            outline: 0;
+            height: 48px;
+        }
+        input:invalid {
+            border: 2px solid $Soft-Red;
+            background-image: url(/images/icon-error.svg);
+            background-repeat: no-repeat;
+            background-position-x: calc(100% - 16px);
+            background-position-y: calc(100% - 10px);
+            &~.input-error {
+                visibility: visible;
+            }
+            &::after {
+                content: '';
+                height: 20px;
+                width: 20px;
+            }
+        }
+    }
+     ::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        opacity: .5;
+    }
+     ::-moz-placeholder {
+        /* Firefox 19+ */
+        opacity: .5;
+    }
+     :-ms-input-placeholder {
+        /* IE 10+ */
+        opacity: .5;
+    }
+     :-moz-placeholder {
+        /* Firefox 18- */
+        opacity: .5;
+    }
+    .input-error {
+        background-color: $Soft-Red;
+        font-size: 10px;
+        font-style: italic;
+        font-weight: 500;
+        line-height: 12px;
+        letter-spacing: 0.25px;
+        display: block;
+        padding: 10px 12px 4px 12px;
+        text-align: left;
+        border-radius: 4px;
+        position: relative;
+        top: -6px;
+        visibility: hidden;
+    }
+    @media #{$small},
+    #{$medium} {
+        .subscribe-form {
+            max-width: 311px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    @media #{$small},
+    #{$medium} {
+        margin-top: 123px;
+        padding: 60px 0 38px 0;
+        &__members {
+            font-size: 12px;
+        }
+        .subscribe-form {
+            &__submit {
+                margin-top: 16px;
+                width: 100%;
+            }
+        }
+    }
+    @media #{$large} {
+        margin-top: 150px;
+        padding: 58px 0 74px 0;
+        &__members {
+            font-size: 13px;
+        }
+        &__title.title {
+            line-height: 40px;
+        }
+        &__form {
+            display: flex;
+            margin-top: 36px;
+            justify-content: center;
+            .form-group {
+                width: 300px;
+            }
+        }
+        .subscribe-form {
+            &__submit {
+                margin-left: 16px;
+            }
+        }
+    }
+}

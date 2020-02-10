@@ -1,0 +1,160 @@
+@import 'reset';
+@import 'fonts';
+@import 'breakpoints';
+@import 'components/header';
+@import 'components/promo';
+@import 'components/features';
+@import 'components/extensions';
+@import 'components/questions';
+@import 'components/subscribe';
+@import 'components/footer';
+// GENERAL START
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Rubik';
+    &.mobile-nav-open {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+h1 {
+    font-weight: 500;
+    @media #{$small},
+    #{$medium} {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    @media #{$large} {
+        font-size: 48px;
+        line-height: 52px;
+    }
+}
+
+@media #{$small} {
+    .hide-in-sm {
+        display: none !important;
+    }
+}
+
+@media #{$medium} {
+    .hide-in-md {
+        display: none !important;
+    }
+}
+
+@media #{$large} {
+    .hide-in-lg {
+        display: none !important;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    @media #{$small},
+    #{$medium} {
+        max-width: 81.5%;
+        margin: 0 auto;
+    }
+    @media #{$large} {
+        max-width: 1104px;
+        margin: 0 auto;
+    }
+}
+
+p {
+    color: $Very-Dark-Blue;
+    opacity: 0.5;
+    margin: 16px 0;
+    @media #{$small},
+    #{$medium} {
+        font-size: 15px;
+        line-height: 25px;
+    }
+    @media #{$large} {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+.main-button {
+    font-weight: 500;
+    line-height: 28px;
+    font-size: 14px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    @media #{$small},
+    #{$medium} {
+        padding: 10px 12px;
+    }
+    @media #{$large} {
+        padding: 10px 25px;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.common-button {
+    @extend .main-button;
+    background: $Soft-Blue;
+    box-shadow: #495DCF 0 8px 8px -4px;
+    color: $white;
+    &:hover {
+        color: $Soft-Blue;
+        border: 2px solid $Soft-Blue;
+        background: $white;
+    }
+}
+
+.light-button {
+    @extend .main-button;
+    background: #F7F7F7;
+    box-shadow: #495DCF 0 8px 8px -4px;
+    color: $Very-Dark-Blue;
+    &:hover {
+        border: 2px solid $Grayish-Blue;
+        background: $white;
+    }
+}
+
+.title {
+    color: $Very-Dark-Blue;
+    font-weight: 500;
+    @media #{$small},
+    #{$medium} {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    @media #{$large} {
+        font-size: 32px;
+        line-height: 52px;
+    }
+}
+
+.small-container {
+    @media #{$medium},
+    #{$large} {
+        max-width: 540px;
+        margin: 0 auto;
+    }
+}

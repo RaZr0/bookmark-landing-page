@@ -1,0 +1,61 @@
+@import '../breakpoints';
+.extensions {
+    text-align: center;
+    .browsers {
+        &__browser {
+            padding: 49px 24px 24px 24px;
+            box-shadow: 0px 10px 20px -5px rgba(73, 93, 207, 0.2);
+            // box-shadow: inset 0px 1px 3px rgba(100, 100, 100, 0.5);
+            border: 1px solid rgba(73, 93, 207, 0.2);
+            border-radius: 15px;
+            max-width: 305px;
+            margin: 40px auto;
+        }
+    }
+    .browser {
+        &__desc {
+            margin-top: 32px;
+        }
+        &__extension-download-link {
+            margin-top: 60px;
+            display: block;
+        }
+        &__title {
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: .25px;
+            font-weight: 500;
+        }
+        &__version {
+            margin-top: 10px;
+        }
+    }
+    @media #{$small},
+    #{$medium} {
+        margin-top: 100px;
+    }
+    @media #{$large} {
+        margin-top: 178px;
+        counter-reset: section;
+        .browsers {
+            display: flex;
+            justify-content: center;
+            &__browser {
+                margin: 40px 35px 40px 0;
+                min-width: 280px;
+                position: relative;
+                .browser {
+                    &__version {
+                        font-size: 15px;
+                    }
+                }
+                &:nth-child(2) {
+                    top: 40px;
+                }
+                &:nth-child(3) {
+                    top: 80px;
+                }
+            }
+        }
+    }
+}

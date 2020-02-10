@@ -1,0 +1,64 @@
+@import '../breakpoints';
+@import '../colors';
+.footer {
+    background: $Very-Dark-Blue;
+    text-align: center;
+    &__link {
+        color: $white;
+    }
+    &__socials {
+        display: flex;
+    }
+    &__item {
+        line-height: 17px;
+    }
+    .socials {
+        &__item {
+            margin: 0 20px;
+            &:hover {
+                filter: invert(42%) sepia(43%) saturate(904%) hue-rotate(315deg) brightness(108%) contrast(88%);
+            }
+        }
+    }
+    @media #{$small} {
+        padding: 43px 0;
+        &__items {
+            margin-top: 39px;
+        }
+        &__item {
+            margin-top: 32px;
+            font-size: 15px;
+            letter-spacing: 1.73px;
+        }
+        &__socials {
+            margin-top: 48px;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    @media #{$medium},
+    #{$large} {
+        padding: 32px 0;
+        .content {
+            display: flex;
+            align-items: center;
+        }
+        &__items {
+            display: flex;
+            margin-left: 62px;
+        }
+        &__item {
+            margin-right: 43px;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+        }
+        &__socials {
+            margin-left: auto;
+        }
+        &__link {
+            &:hover {
+                color: $Soft-Red;
+            }
+        }
+    }
+}

@@ -1,0 +1,72 @@
+@import '../breakpoints';
+.promo {
+    .container {
+        .content {
+            display: flex;
+            position: relative;
+        }
+    }
+    &__browser-link {
+        &:first-child {
+            margin-right: 12px;
+        }
+    }
+    @media #{$small},
+    #{$medium} {
+        .container {
+            .content {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+            }
+        }
+        margin-top: 80px;
+        &__img-wrapper {
+            position: relative;
+            order: -1;
+            margin: 0 auto;
+        }
+        &__img {
+            width: 100%;
+            position: relative;
+            max-width: 579px;
+            max-height: 386px;
+        }
+        &__info {
+            margin-top: 61px;
+            text-align: center;
+        }
+        &__title {
+            color: $Very-Dark-Blue;
+        }
+        &__desc {
+            margin-top: 16px;
+        }
+        &__actions {
+            display: flex;
+            justify-content: space-between;
+            margin: 32px auto;
+            max-width: 291px;
+        }
+    }
+    @media #{$large} {
+        margin-top: 108px;
+        .container {
+            .content {
+                align-items: center;
+            }
+        }
+        &__desc {
+            margin-top: 24px;
+            margin-right: 65px;
+        }
+        &__actions {
+            display: flex;
+            margin-top: 32px;
+        }
+        &__img {
+            max-width: 579px;
+            max-height: 386px;
+        }
+    }
+}
