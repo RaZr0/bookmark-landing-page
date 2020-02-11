@@ -3,12 +3,14 @@
     text-align: center;
     .browsers {
         &__browser {
+            background: url(/images/bg-dots.svg);
+            background-repeat: repeat no-repeat;
+            background-position-y: 72%;
             padding: 49px 24px 24px 24px;
             box-shadow: 0px 10px 20px -5px rgba(73, 93, 207, 0.2);
-            // box-shadow: inset 0px 1px 3px rgba(100, 100, 100, 0.5);
             border: 1px solid rgba(73, 93, 207, 0.2);
             border-radius: 15px;
-            max-width: 305px;
+            max-width: 280px;
             margin: 40px auto;
         }
     }
@@ -28,6 +30,13 @@
         }
         &__version {
             margin-top: 10px;
+            &::after {
+                content: '';
+                background: url(/images/bg-dots.svg);
+                background-repeat: no-repeat;
+                background-position-y: 80%;
+                height: 1px;
+            }
         }
     }
     @media #{$small},

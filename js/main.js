@@ -50,7 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 function closeMenu() {
                     headerHamburger.src = '/images/icon-hamburger.svg';
-                    headerLogoImg.src = '/images/logo-bookmark.svg';
                     headerNav.classList.remove('open');
                     headerNav.setAttribute('aria-modal', true);
                     document.body.classList.remove('mobile-nav-open');
@@ -61,7 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 function openMenu() {
                     headerHamburger.src = '/images/icon-close.svg';
-                    headerLogoImg.src = '/images/logo-bookmark-white.svg';
                     headerNav.classList.add('open');
                     document.body.classList.add('mobile-nav-open');
                     header.classList.add('mobile-nav-open');
