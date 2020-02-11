@@ -148,6 +148,24 @@ table {
   padding-top: 40px;
 }
 
+@-webkit-keyframes mobileNavOpenAnimation {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100vh;
+  }
+}
+
+@keyframes mobileNavOpenAnimation {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100vh;
+  }
+}
+
 .header .container .content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -169,6 +187,8 @@ table {
     z-index: 999;
   }
   .header.mobile-nav-open {
+    -webkit-animation: mobileNavOpenAnimation .1s;
+            animation: mobileNavOpenAnimation .1s;
     background: #252b46;
     position: absolute;
     opacity: 0.95;
@@ -374,12 +394,43 @@ table {
   text-align: center;
 }
 
+@-webkit-keyframes tabsAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes tabsAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .features .tabs__tab {
   font-size: 16px;
   line-height: 17px;
   color: #252b46;
   letter-spacing: .53px;
   position: relative;
+}
+
+.features .tabs__tab--active::after {
+  -webkit-animation: tabsAnimation .5s;
+          animation: tabsAnimation .5s;
+  content: '';
+  height: 4px;
+  background: #fa5757;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .features__tabs-content .content {
@@ -406,13 +457,6 @@ table {
   .features .tabs__tab--active::after {
     content: '';
     width: 143px;
-    height: 4px;
-    background: #fa5757;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
   }
 }
 
@@ -428,6 +472,8 @@ table {
   }
   .features__tabs-content .content.selected-tab {
     display: block !important;
+    -webkit-animation: tabsAnimation .5s;
+            animation: tabsAnimation .5s;
   }
   .features__tabs-content .content__img {
     width: 100%;
@@ -459,15 +505,7 @@ table {
     cursor: pointer;
   }
   .features .tabs__tab--active::after {
-    content: '';
     width: 100%;
-    height: 4px;
-    background: #fa5757;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
   }
 }
 
@@ -658,6 +696,10 @@ table {
       -ms-flex-align: center;
           align-items: center;
   padding: 18px 0;
+}
+
+.questions .accordion .item__question:hover {
+  color: #fa5757;
 }
 
 .questions .accordion .item__question:nth-child(n) {
@@ -1076,10 +1118,10 @@ button {
   text-align: center;
   display: inline-block;
   border-radius: 7px;
-  padding: 10px 18px;
+  padding: 10px 17px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) and (max-width: 1199.9px), (min-width: 1200px) {
   .main-button, .common-button, .light-button {
     border: 2px solid transparent;
   }

@@ -118,8 +118,9 @@ button {
     text-align: center;
     display: inline-block;
     border-radius: 7px;
-    padding: 10px 18px;
-    @media #{$large} {
+    padding: 10px 17px;
+    @media #{$medium},
+    #{$large} {
         border: 2px solid transparent;
     }
     &:hover {

@@ -51,6 +51,9 @@ $questionBorder: 1px solid rgba($color: #979797, $alpha: .3);
                 justify-content: space-between;
                 align-items: center;
                 padding: 18px 0;
+                &:hover {
+                    color: $Soft-Red;
+                }
                 &:nth-child(n) {
                     border-top: $questionBorder;
                 }

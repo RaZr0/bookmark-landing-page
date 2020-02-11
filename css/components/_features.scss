@@ -2,6 +2,14 @@
 @import '../colors';
 .features {
     text-align: center;
+    @keyframes tabsAnimation {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
     .tabs {
         &__tab {
             font-size: 16px;
@@ -9,6 +17,19 @@
             color: $Very-Dark-Blue;
             letter-spacing: .53px;
             position: relative;
+        }
+        &__tab--active {
+            &::after {
+                animation: tabsAnimation .5s;
+                content: '';
+                height: 4px;
+                background: $Soft-Red;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
         }
     }
     &__tabs-content {
@@ -35,13 +56,6 @@
                 &::after {
                     content: '';
                     width: 143px;
-                    height: 4px;
-                    background: $Soft-Red;
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    margin: auto;
                 }
             }
         }
@@ -56,6 +70,7 @@
             margin-top: 72px;
             .content.selected-tab {
                 display: block !important;
+                animation: tabsAnimation .5s;
             }
             .content {
                 &__img {
@@ -88,15 +103,7 @@
             }
             &__tab--active {
                 &::after {
-                    content: '';
                     width: 100%;
-                    height: 4px;
-                    background: $Soft-Red;
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    margin: auto;
                 }
             }
         }
