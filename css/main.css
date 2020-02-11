@@ -402,7 +402,7 @@ table {
   }
   .promo__img-wrapper::before {
     width: 40.9vw;
-    left: calc(65.5%);
+    left: calc(65.1%);
     top: 30%;
     height: 70%;
   }
