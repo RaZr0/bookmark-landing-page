@@ -312,6 +312,16 @@ table {
   position: relative;
 }
 
+.promo__img-wrapper::before {
+  content: '';
+  background-color: #5368df;
+  border-top-left-radius: 106px;
+  border-bottom-left-radius: 106px;
+  display: block;
+  position: absolute;
+  z-index: -1;
+}
+
 @media (max-width: 767.9px), (min-width: 768px) and (max-width: 1199.9px) {
   .promo .container .content {
     display: -webkit-box;
@@ -330,9 +340,14 @@ table {
             order: -1;
     margin: 0 auto;
   }
+  .promo__img-wrapper::before {
+    width: 74.8vw;
+    left: calc(20%);
+    height: 80%;
+    top: 22%;
+  }
   .promo__img {
     width: 100%;
-    position: relative;
     max-width: 579px;
     max-height: 386px;
     margin: 0 auto;
@@ -384,6 +399,12 @@ table {
   .promo__img {
     max-width: 579px;
     max-height: 386px;
+  }
+  .promo__img-wrapper::before {
+    width: 40.9vw;
+    left: calc(65.1%);
+    top: 30%;
+    height: 70%;
   }
   .promo__browser-link:first-child {
     margin-right: 16px;
@@ -442,6 +463,19 @@ table {
   max-height: 346px;
 }
 
+.features__tabs-content .content__img-wrapper::before {
+  content: '';
+  width: 81.9vw;
+  background-color: #5368df;
+  border-top-right-radius: 225px;
+  border-bottom-right-radius: 106px;
+  display: block;
+  height: 98%;
+  position: absolute;
+  top: 17%;
+  z-index: -1;
+}
+
 .features__tabs-content .content.selected-tab {
   -webkit-animation: tabsAnimation .5s;
           animation: tabsAnimation .5s;
@@ -478,11 +512,18 @@ table {
   .features__tabs-content .content.selected-tab {
     display: block !important;
   }
+  .features__tabs-content .content__img-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  .features__tabs-content .content__img-wrapper::before {
+    right: calc(14%);
+  }
   .features__tabs-content .content__img {
     width: 100%;
   }
   .features__tabs-content .content__info {
-    margin-top: 32px;
+    margin-top: 67px;
   }
   .features__tabs-content .content__link {
     margin-top: 20px;
@@ -540,6 +581,13 @@ table {
   }
   .features__tabs-content .content__img {
     margin-right: 117px;
+  }
+  .features__tabs-content .content__img-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  .features__tabs-content .content__img-wrapper::before {
+    right: calc(37%);
   }
   .features__tabs-content .content__info {
     text-align: left;
