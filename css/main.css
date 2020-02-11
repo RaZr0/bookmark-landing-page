@@ -442,6 +442,11 @@ table {
   max-height: 346px;
 }
 
+.features__tabs-content .content.selected-tab {
+  -webkit-animation: tabsAnimation .5s;
+          animation: tabsAnimation .5s;
+}
+
 @media (max-width: 767.9px) {
   .features .tabs {
     max-width: 311px;
@@ -472,8 +477,6 @@ table {
   }
   .features__tabs-content .content.selected-tab {
     display: block !important;
-    -webkit-animation: tabsAnimation .5s;
-            animation: tabsAnimation .5s;
   }
   .features__tabs-content .content__img {
     width: 100%;

@@ -40,6 +40,9 @@
                 max-height: 346px;
             }
         }
+        .content.selected-tab {
+            animation: tabsAnimation .5s;
+        }
     }
     @media #{$small} {
         .tabs {
@@ -70,7 +73,6 @@
             margin-top: 72px;
             .content.selected-tab {
                 display: block !important;
-                animation: tabsAnimation .5s;
             }
             .content {
                 &__img {
