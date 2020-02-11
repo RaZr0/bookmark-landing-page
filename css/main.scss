@@ -51,11 +51,11 @@ h1 {
     font-weight: 500;
     @media #{$small},
     #{$medium} {
-        font-size: 30px;
+        font-size: 1.875rem;
         line-height: 40px;
     }
     @media #{$large} {
-        font-size: 48px;
+        font-size: 3rem;
         line-height: 52px;
     }
 }
@@ -99,11 +99,11 @@ p {
     margin: 16px 0;
     @media #{$small},
     #{$medium} {
-        font-size: 15px;
+        font-size: 0.9375rem;
         line-height: 25px;
     }
     @media #{$large} {
-        font-size: 18px;
+        font-size: 1.125rem;
         line-height: 28px;
     }
 }
@@ -115,7 +115,7 @@ button {
 .main-button {
     font-weight: 500;
     line-height: 28px;
-    font-size: 14px;
+    font-size: 0.875rem;
     text-align: center;
     display: inline-block;
     border-radius: 7px;
@@ -158,11 +158,11 @@ button {
     font-weight: 500;
     @media #{$small},
     #{$medium} {
-        font-size: 24px;
+        font-size: 1.5rem;
         line-height: 30px;
     }
     @media #{$large} {
-        font-size: 32px;
+        font-size: 2rem;
         line-height: 52px;
     }
 }

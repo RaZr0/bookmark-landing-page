@@ -23,7 +23,7 @@
             display: block;
         }
         &__title {
-            font-size: 20px;
+            font-size: 1.25rem;
             line-height: 24px;
             letter-spacing: .25px;
             font-weight: 500;
@@ -55,7 +55,7 @@
                 position: relative;
                 .browser {
                     &__version {
-                        font-size: 15px;
+                        font-size: 0.9375rem;
                     }
                 }
                 &:nth-child(2) {
